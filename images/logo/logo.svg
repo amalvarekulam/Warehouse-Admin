@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="162.796" height="27.091" viewBox="0 0 162.796 27.091">
+  <g id="logo" transform="translate(-102 -17)">
+    <path id="Path_1" data-name="Path 1" d="M1285.861,1574.012v23.648h10.9v-17.573Z" transform="translate(-1144.178 -1554.603)" fill="#fff"/>
+    <path id="Subtraction_1" data-name="Subtraction 1" d="M10.9,7.623h0L0,1.548V0L10.9,6.075V7.623Z" transform="translate(141.683 17)" fill="#fff"/>
+    <text id="WAREHOUSE" transform="translate(162.643 32.246)" fill="#fff" font-size="13" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="0">WAREHOUSE</tspan></text>
+    <text id="ZONE" transform="translate(246.796 43.091)" fill="#fff" font-size="5" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.2em"><tspan x="0" y="0">ZONE</tspan></text>
+    <path id="Subtraction_4" data-name="Subtraction 4" d="M33.957,23.592H28.066V9.189L5.85,14.88v8.713H0V8.7L33.957,0V23.592Z" transform="translate(106.646 19.409)" fill="#fff"/>
+    <path id="Subtraction_2" data-name="Subtraction 2" d="M0,10.246H0V8.7L33.957,0V1.548L0,10.246Z" transform="translate(106.645 17)" fill="#fff"/>
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="94.128" height="1.032" transform="translate(144.668 41.947)" fill="#fff"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="10.495" height="1.032" transform="translate(102 42.454)" fill="#fff"/>
+  </g>
+</svg>

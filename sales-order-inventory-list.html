@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Sales Order Inventory List</title>
+    <!-- site icon -->
+    <!-- <link rel="icon" href="images/fevicon.png" type="image/png" /> -->
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- site css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- responsive css -->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- color css -->
+    <link rel="stylesheet" href="css/color_2.css" />
+    <!-- select bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap-select.css" />
+    <!-- scrollbar css -->
+    <link rel="stylesheet" href="css/perfect-scrollbar.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/table-styles.css" />
+
+</head>
+
+<body class="dashboard dashboard_2 cbp-spmenu-push">
+    <div class="full_container" id="loader">
+        <div class="inner_container">
+            <!-- Sidebar  -->
+            <nav id="sidebar" class="ps active d-none d-lg-block">
+                <div class="sidebar_blog_1 blue-bg">
+                    <div class="sidebar-header">
+                        <div class="logo_section">
+                            <!-- <button type="button" id="sidebarCollapse" class="sidebar_toggle d-none d-lg-block"><i
+                           class="fa fa-bars "></i></button> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar_blog_2 " id="myDIV">
+                    <ul class="list-unstyled components">
+                        <li class="sidebar_btn sidebar_active companymenuli ">
+                            <a href="test.html" class="">
+                                <svg width="20" height="20" fill="currentColor" class="bi bi-house-door mt-2"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
+                                </svg>
+                                <span class="side-main-menu-style-span">Home</span></a>
+
+                        </li>
+                        <hr>
+                        <li class=" sidebar_btn  companymenuli ">
+                            <a href="#" data-toggle="collapse" aria-expanded="false" class=" ">
+                                <svg width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                                <span class="side-main-menu-style-span">Sales<br>Order</span>
+                            </a>
+                            <ul class="sidenav " id="navSubSales">
+                                <div class="d-flex mb-4 ps-2 bg_header">
+                                    <img src="./icons/Group 187.svg" alt="" class="ps-4 pe-2">
+                                    <span class="text-dark">Sales Order</span>
+                                </div>
+                                <li class="sidenav_minheight">
+                                    <a href="sales-order.html" class="bg_active"><img src="./icons/overview.svg" alt=""
+                                            class="pe-3 "><span>Overview</span></a>
+                                </li>
+                                <li class="sidenav_minheight">
+                                    <a href="#"><img src="./icons/create.svg" alt=""
+                                            class="pe-3"><span>Create</span></a>
+                                </li>
+                                <li class="sidenav_minheight">
+                                    <a href="#"><img src="./icons/picking_goods.svg" alt="" class="pe-3 "><span>Picking
+                                            Goods</span></a>
+                                </li>
+                                <li class="sidenav_minheight">
+                                    <a href="#"><img src="./icons/retuens.svg" alt=""
+                                            class="pe-3"><span>Returns</span></a>
+                                </li>
+                                <li class="sidenav_minheight">
+                                    <a href="#"><img src="./icons/search.svg" alt=""
+                                            class="pe-3"><span>Search</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <hr>
+                        <li class=" sidebar_btn  companymenuli ">
+                            <a href="#" data-toggle="collapse" aria-expanded="false" class="">
+                                <svg width="20" height="20" fill="currentColor" class="bi bi-clipboard-check"
+                                    viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                                    <path
+                                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                                    <path
+                                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                                </svg>
+                                <span class="side-main-menu-style-span">Purchase<br>Order</span>
+                                <!-- <i class="fa fa-angle-right badge_dropdown i_display rotate"></i> -->
+                            </a>
+                            <ul class="sidenav" id="navSubPurchase">
+                                <div class="d-flex mb-4 ps-2 bg_header">
+                                    <img src="./icons/Group 188.svg" alt="" class="ps-4 pe-2">
+                                    <span class="text-dark">Purchase Order</span>
+                                </div>
+                                <li class="sidenav_minheight">
+                                    <a href="purchase-order.html" class="bg_active"><img src="./icons/overview.svg"
+                                            alt="" class="pe-3"><span>Overview</span></a>
+                                </li>
+                                <li class="sidenav_minheight">
+                                    <a href="#"><img src="./icons/create.svg" alt=""
+                                            class="pe-3"><span>Create</span></a>
+                                </li>
+                                <li class="sidenav_minheight">
+                                    <a href="#"><img src="./icons/picking_goods.svg" alt="" class="pe-3"><span>Picking
+                                            Goods</span></a>
+                                </li>
+                                <li class="sidenav_minheight">
+                                    <a href="#"><img src="./icons/retuens.svg" alt=""
+                                            class="pe-3"><span>Returns</span></a>
+                                </li>
+                                <li class="sidenav_minheight">
+                                    <a href="#"><img src="./icons/search.svg" alt=""
+                                            class="pe-3"><span>Search</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <hr>
+                        <li class="sidebar_btn companymenuli ">
+                            <a href="#" data-toggle="collapse" aria-expanded="false" class="">
+                                <svg width="20" height="20" fill="currentColor" class="bi bi-graph-up mt-2"
+                                    viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M0 0h1v15h15v1H0V0Zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z" />
+                                </svg>
+                                <span class="side-main-menu-style-span">Stock</span>
+                                <!-- <i class="fa fa-angle-right badge_dropdown i_display rotate"></i> -->
+                            </a>
+                            <ul class="sidenav" id="navSubStock">
+                                <div class="d-flex mb-4 ps-2 bg_header">
+                                    <img src="./icons/stock-svgrepo-com.svg" alt="" class="ps-4 pe-2">
+                                    <span class="text-dark">Stock </span>
+                                </div>
+                                <li class="sidenav_minheight">
+                                    <a href="stock-order-overview.html" class="bg_active"><img
+                                            src="./icons/overview.svg" alt="" class="pe-3"><span>Overview</span></a>
+                                </li>
+                                <li class="sidenav_minheight">
+                                    <a href="#"><img src="./icons/stock_take.svg" alt="" class="pe-3"><span>Stock
+                                            Take</span></a>
+                                </li>
+                                <li class="sidenav_minheight">
+                                    <a href="#"><img src="./icons/stock_valuation.svg" alt="" class="pe-3"><span>Stock
+                                            Valuation</span></a>
+                                </li>
+                                <li class="sidenav_minheight">
+                                    <a href="#"><img src="./icons/trace_transactions.svg" alt=""
+                                            class="pe-3"><span>Trace
+                                            Transactions</span></a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <hr>
+                        <li class="sidebar_btn  companymenuli ">
+                            <a href="#" data-toggle="collapse" aria-expanded="false" class="">
+                                <svg width="20" height="20" fill="currentColor"
+                                    class="bi bi-layout-text-sidebar-reverse mt-2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.5 3a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5zm0 3a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5zm.5 3.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm-.5 2.5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5z" />
+                                    <path
+                                        d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2zM4 1v14H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h2zm1 0h9a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5V1z" />
+                                </svg> <span class="side-main-menu-style-span">Products</span>
+
+                            </a>
+                            <ul class="sidenav" id="navSubProduct">
+                                <div class="d-flex mb-4 ps-2 bg_header">
+                                    <img src="./icons/Union 5.svg" alt="" class="ps-4 pe-2">
+                                    <span class="text-dark">Products </span>
+                                </div>
+                                <li class="sidenav_minheight">
+                                    <a href="products.html" class="bg_active"><img src="./icons/create.svg" alt=""
+                                            class="pe-3"><span>Create</span></a>
+                                </li>
+                                <li class="sidenav_minheight">
+                                    <a href="#"><img src="./icons/print_label.svg" alt="" class="pe-3"><span>Print
+                                            Label</span></a>
+                                </li>
+                                <li class="sidenav_minheight">
+                                    <a href="#"><img src="./icons/search.svg" alt=""
+                                            class="pe-3"><span>Search</span></a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <hr>
+                        <li class="sidebar_btn companymenuli ">
+                            <a href="#" data-toggle="collapse" aria-expanded="false" class="">
+                                <svg width="20" height="20" fill="currentColor" class="bi bi-person mt-1"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                </svg> <span class="side-main-menu-style-span">Accounts</span>
+                                <!-- <i class="fa fa-angle-right badge_dropdown i_display rotate"></i> -->
+                            </a>
+                            <ul class="sidenav" id="navSubAccounts">
+                                <div class="d-flex mb-4 ps-2 bg_header">
+                                    <img src="./icons/Union 6.svg" alt="" class="ps-4 pe-2">
+                                    <span class="text-dark">Accounts </span>
+                                </div>
+                                <li class="sidenav_minheight">
+                                    <a href="" class="bg_active"><img src="./icons/create.svg" alt=""
+                                            class="pe-3"><span>Create</span></a>
+                                </li>
+                                <li class="sidenav_minheight">
+                                    <a href="#"><img src="./icons/edit_black.svg" alt=""
+                                            class="pe-3"><span>Edit</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <hr>
+                        <li class="sidebar_btn companymenuli ">
+                            <a href="#" data-toggle="collapse" aria-expanded="false" class="">
+                                <svg width="20" height="20" fill="currentColor" class="bi bi-shuffle"
+                                    viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z" />
+                                    <path
+                                        d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z" />
+                                </svg> <span class="side-main-menu-style-span">Route<br>
+                                    Planning</span>
+                                <!-- <i class="fa fa-angle-right badge_dropdown i_display rotate"></i> -->
+                            </a>
+                            <ul class="sidenav" id="navSubRoute">
+                                <div class="d-flex mb-4 ps-2 bg_header">
+                                    <img src="./icons/route-svgrepo-com.svg" alt="" class="ps-4 pe-2">
+                                    <span class="text-dark">Route Planning</span>
+                                </div>
+                                <li class="sidenav_minheight">
+                                    <a href="#" class="bg_active"><img src="./icons/overview.svg" alt=""
+                                            class="pe-3"><span>Overview</span></a>
+                                </li>
+                                <li class="sidenav_minheight">
+                                    <a href="#"><img src="./icons/trucks.svg" alt=""
+                                            class="pe-3"><span>Trucks</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <hr>
+                        <li class="sidebar_btn companymenuli ">
+                            <a href="test.html" class=""><svg width="20" height="20" fill="currentColor"
+                                    class="bi bi-card-checklist mt-2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                                    <path
+                                        d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z" />
+                                </svg>
+                                <span class="side-main-menu-style-span">Reports</span></a>
+                        </li>
+                        <hr>
+                        <li class="sidebar_btn companymenuli ">
+                            <a href="#" data-toggle="collapse" aria-expanded="false" class=" ">
+                                <svg width="20" height="20" fill="currentColor" class="bi bi-laptop"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
+                                </svg>
+                                <span class="side-main-menu-style-span">System<br>Configuration</span>
+
+                            </a>
+                            <ul class="sidenav" id="navSubConfig">
+                                <div class="d-flex mb-4 bg_header">
+                                    <img src="./icons/system.svg" alt="" class="ps-3 pe-2">
+                                    <span class="text-dark">System Configuration</span>
+                                </div>
+                                <li class="sidenav_minheight">
+                                    <a href="#" class="bg_active"><img src="./icons/users.svg" alt=""
+                                            class="pe-3"><span>Users</span></a>
+                                </li>
+                                <li class="sidenav_minheight">
+                                    <a href="#"><img src="./icons/admin.svg" alt="" class="pe-3"><span>Admin</span></a>
+                                </li>
+                            </ul>
+
+                        </li>
+
+                        <hr>
+
+                    </ul>
+                </div>
+            </nav>
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content" class="">
+                <!-- topbar   d-block d-lg-none-->
+                <div class="topbar">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="full">
+                            <button type="button" id="sidebarCollapseMobile" class="sidebar_toggle "><i
+                                    class="fa fa-bars ms-2"></i></button>
+                            <div class="logo_section ">
+                                <a href="#"><img class="img-responsive" src="images/logo/logo.svg" alt="#" /></a>
+                            </div>
+                            <div class="right_topbar ">
+                                <div class="icon_info">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-bell-o"></i><span class="badge">2</span></a>
+                                        </li>
+                                        <li><a href="#"><i class="fa fa-envelope-o"></i><span class="badge">3</span></a>
+                                        </li>
+                                    </ul>
+                                    <ul class="user_profile_dd ms-0 me-2">
+                                        <li>
+                                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                                <!-- <img class="img-responsive rounded-circle" src="images/layout_img/user_img.jpg"
+                                       alt="#" /> -->
+                                                <span class="name_user">John David</span>
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">My Profile</a>
+                                                <a class="dropdown-item" href="#">Settings</a>
+                                                <a class="dropdown-item" href="#"><span>Log Out</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <!-- end topbar -->
+                <!-- dashboard inner -->
+                <div class="midde_cont" id="main">
+                    <div class="container-fluid mt-4">
+                        <div class="row">
+                            <div class="ps-2 pe-3">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb ">
+                                        <li class="breadcrumb-item text-dark"><a href="#"><i
+                                                    class="bi bi-house-door"></i></a>
+                                        </li>
+                                        <li class="breadcrumb-item active text-dark" aria-current="page"><a
+                                                href="">Sales Order</a>
+                                        </li>
+                                        <li class="breadcrumb-item active text-dark" aria-current="page"><a
+                                                href="">Sales Order Inventory List
+
+
+                                            </a> </li>
+                                    </ol>
+                                </nav>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <div class="row">
+                                            <div class="col-lg-9">
+                                                <h5 class="card-title">SALES ORDER - INVENTORY</h5>
+                                            </div>
+                                            <div class="col-lg-3 ">
+                                                <div class="d-flex justify-content-end">
+                                                    <button type="button" class="btn btn-blue-gradient me-2"><i
+                                                            class="bi bi-grid pe-2"></i> Grid
+                                                        View</button>
+                                                    <button type="button" class="btn btn-list-view "><i
+                                                            class="bi bi-list-task pe-2 text-black"></i> List
+                                                        View</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-lg-12 mb-3 " style="overflow-x:auto;">
+
+                                                <table class="table_prod">
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <th class="bg_table_grey"># </th>
+                                                            <th class="bg_table_grey"> SO Number</th>
+                                                            <th class="bg_table_grey"> Status</th>
+                                                            <th class="bg_table_grey"> # </th>
+                                                            <th class="bg_table_grey"> Inventory </th>
+                                                            <th class="bg_table_grey"> Progress</th>
+                                                            <th class="bg_table_grey"></th>
+                                                            <th class="bg_table_grey"></th>
+                                                        </tr>
+                                                        <div>
+                                                            <tr>
+
+                                                                <td class="text-center">1</td>
+                                                                <td>BRO002</td>
+                                                                <td>
+                                                                    <div class="alert alert-primary" role="alert"> <i
+                                                                            class="fa fa-circle pe-2 text-primary"></i>
+                                                                        Being Picked </div>
+                                                                </td>
+                                                                <td></td>
+                                                                <td><i
+                                                                        class="bi bi-x-square-fill fa-lg text-danger"></i>
+                                                                </td>
+                                                                <td class="d-flex">
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar  w-100"
+                                                                            role="progressbar" aria-valuenow="75"
+                                                                            aria-valuemin="0" aria-valuemax="100">
+                                                                            <div class="progress-bar-anim">
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="progress-bar-bg " style="width: 0"
+                                                                            aria-valuenow="0" aria-valuemin="0"
+                                                                            aria-valuemax="100">
+                                                                            <div class="progress-bar-anim-bg ">
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <span class="ms-3 mt-2">100%</span>
+                                                                </td>
+                                                                <td></td>
+                                                                <td> <button class="btn btn-light-gradient"
+                                                                        style="min-width: 85px;" type="button"><i
+                                                                            class="bi bi-pen-fill text-dark pe-1"></i>
+                                                                        Edit</button></td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td class="text-center">1</td>
+                                                                <td>Product A</td>
+                                                                <td>
+                                                                    <div class="d-flex justify-content-between">
+                                                                        <span>42 Required</span>
+                                                                        <span>40 Available</span>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-end">
+                                                                    <div>
+                                                                        <button class="btn btn-blue-gradient "
+                                                                            type="button"><i class="bi bi-check-lg"></i>
+                                                                            Adjust to Available</button>
+
+                                                                    </div>
+                                                                </td>
+                                                                <td> <button class="btn btn-red-gradient"
+                                                                        type="button"><i class="bi bi-trash pe-1">
+                                                                            Delete</button></td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td class="text-center">2</td>
+                                                                <td>Product B</td>
+                                                                <td>
+                                                                    <div class="d-flex justify-content-between">
+                                                                        <span>17 Required</span>
+                                                                        <span>12 Available</span>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-end">
+                                                                    <div>
+                                                                        <button class="btn btn-blue-gradient "
+                                                                            type="button"><i class="bi bi-check-lg"></i>
+                                                                            Adjust to Available</button>
+
+                                                                    </div>
+                                                                </td>
+                                                                <td> <button class="btn btn-red-gradient"
+                                                                        type="button"><i class="bi bi-trash pe-1">
+                                                                            Delete</button></td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td>3</td>
+                                                                <td>Product C</td>
+                                                                <td>
+                                                                    <div class="d-flex justify-content-between">
+                                                                        <span>10 Required</span>
+                                                                        <span>0 Available</span>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-end">
+                                                                    <div>
+                                                                        <button class="btn btn-blue-gradient "
+                                                                            type="button"><i class="bi bi-check-lg"></i>
+                                                                            Adjust to Available</button>
+
+                                                                    </div>
+                                                                </td>
+                                                                <td> <button class="btn btn-red-gradient"
+                                                                        type="button"><i class="bi bi-trash pe-1">
+                                                                            Delete</button></td>
+                                                            </tr>
+                                                        </div>
+                                                        <div>
+                                                            <tr>
+
+                                                                <td class="text-center">2</td>
+                                                                <td>BRO002</td>
+                                                                <td>
+                                                                    <div class="alert alert-primary" role="alert"> <i
+                                                                            class="fa fa-circle pe-2 text-primary"></i>
+                                                                        Being Picked </div>
+                                                                </td>
+                                                                <td></td>
+                                                                <td><i
+                                                                        class="bi bi-x-square-fill fa-lg text-danger"></i>
+                                                                </td>
+                                                                <td class="d-flex">
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar  w-100"
+                                                                            role="progressbar" aria-valuenow="75"
+                                                                            aria-valuemin="0" aria-valuemax="100">
+                                                                            <div class="progress-bar-anim">
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="progress-bar-bg " style="width: 0"
+                                                                            aria-valuenow="0" aria-valuemin="0"
+                                                                            aria-valuemax="100">
+                                                                            <div class="progress-bar-anim-bg ">
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <span class="ms-3 mt-2">100%</span>
+                                                                </td>
+                                                                <td></td>
+                                                                <td> <button class="btn btn-light-gradient"
+                                                                        style="min-width: 85px;" type="button"><i
+                                                                            class="bi bi-pen-fill text-dark pe-1"></i>
+                                                                        Edit</button></td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td class="text-center">1</td>
+                                                                <td>Product A</td>
+                                                                <td>
+                                                                    <div class="d-flex justify-content-between">
+                                                                        <span>42 Required</span>
+                                                                        <span>40 Available</span>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-end">
+                                                                    <div>
+                                                                        <button class="btn btn-blue-gradient "
+                                                                            type="button"><i class="bi bi-check-lg"></i>
+                                                                            Adjust to Available</button>
+
+                                                                    </div>
+                                                                </td>
+                                                                <td> <button class="btn btn-red-gradient"
+                                                                        type="button"><i class="bi bi-trash pe-1">
+                                                                            Delete</button></td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td class="text-center">2</td>
+                                                                <td>Product B</td>
+                                                                <td>
+                                                                    <div class="d-flex justify-content-between">
+                                                                        <span>17 Required</span>
+                                                                        <span>12 Available</span>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-end">
+                                                                    <div>
+                                                                        <button class="btn btn-blue-gradient "
+                                                                            type="button"><i class="bi bi-check-lg"></i>
+                                                                            Adjust to Available</button>
+
+                                                                    </div>
+                                                                </td>
+                                                                <td> <button class="btn btn-red-gradient"
+                                                                        type="button"><i class="bi bi-trash pe-1">
+                                                                            Delete</button></td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td>3</td>
+                                                                <td>Product C</td>
+                                                                <td>
+                                                                    <div class="d-flex justify-content-between">
+                                                                        <span>10 Required</span>
+                                                                        <span>0 Available</span>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-end">
+                                                                    <div>
+                                                                        <button class="btn btn-blue-gradient "
+                                                                            type="button"><i class="bi bi-check-lg"></i>
+                                                                            Adjust to Available</button>
+
+                                                                    </div>
+                                                                </td>
+                                                                <td> <button class="btn btn-red-gradient"
+                                                                        type="button"><i class="bi bi-trash pe-1">
+                                                                            Delete</button></td>
+                                                            </tr>
+                                                        </div>
+                                                        <div>
+                                                            <tr>
+
+                                                                <td class="text-center">3</td>
+                                                                <td>BRO002</td>
+                                                                <td>
+                                                                    <div class="alert alert-primary" role="alert"> <i
+                                                                            class="fa fa-circle pe-2 text-primary"></i>
+                                                                        Being Picked </div>
+                                                                </td>
+                                                                <td></td>
+                                                                <td><i
+                                                                        class="bi bi-x-square-fill fa-lg text-danger"></i>
+                                                                </td>
+                                                                <td class="d-flex">
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar  w-100"
+                                                                            role="progressbar" aria-valuenow="75"
+                                                                            aria-valuemin="0" aria-valuemax="100">
+                                                                            <div class="progress-bar-anim">
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <span class="ms-3 mt-2">100%</span>
+                                                                </td>
+                                                                <td></td>
+                                                                <td> <button class="btn btn-light-gradient"
+                                                                        style="min-width: 85px;" type="button"><i
+                                                                            class="bi bi-pen-fill text-dark pe-1"></i>
+                                                                        Edit</button></td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td class="text-center">1</td>
+                                                                <td>Product A</td>
+                                                                <td>
+                                                                    <div class="d-flex justify-content-between">
+                                                                        <span>42 Required</span>
+                                                                        <span>40 Available</span>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-end">
+                                                                    <div>
+                                                                        <button class="btn btn-blue-gradient "
+                                                                            type="button"><i class="bi bi-check-lg"></i>
+                                                                            Adjust to Available</button>
+
+                                                                    </div>
+                                                                </td>
+                                                                <td> <button class="btn btn-red-gradient"
+                                                                        type="button"><i class="bi bi-trash pe-1">
+                                                                            Delete</button></td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td class="text-center">2</td>
+                                                                <td>Product B</td>
+                                                                <td>
+                                                                    <div class="d-flex justify-content-between">
+                                                                        <span>17 Required</span>
+                                                                        <span>12 Available</span>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-end">
+                                                                    <div>
+                                                                        <button class="btn btn-blue-gradient "
+                                                                            type="button"><i class="bi bi-check-lg"></i>
+                                                                            Adjust to Available</button>
+
+                                                                    </div>
+                                                                </td>
+                                                                <td> <button class="btn btn-red-gradient"
+                                                                        type="button"><i class="bi bi-trash pe-1">
+                                                                            Delete</button></td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td>3</td>
+                                                                <td>Product C</td>
+                                                                <td>
+                                                                    <div class="d-flex justify-content-between">
+                                                                        <span>10 Required</span>
+                                                                        <span>0 Available</span>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-end">
+                                                                    <div>
+                                                                        <button class="btn btn-blue-gradient "
+                                                                            type="button"><i class="bi bi-check-lg"></i>
+                                                                            Adjust to Available</button>
+
+                                                                    </div>
+                                                                </td>
+                                                                <td> <button class="btn btn-red-gradient"
+                                                                        type="button"><i class="bi bi-trash pe-1">
+                                                                            Delete</button></td>
+                                                            </tr>
+                                                        </div>
+
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- footer -->
+                    <div class="container-fluid">
+                        <div class="footer">
+                            <p>2022 © All rights reserved - WMS<br>
+                                <!-- Distributed By: <a href="">Warehouse</a> -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end dashboard inner -->
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- select country -->
+    <script src="js/bootstrap-select.js"></script>
+    <!-- nice scrollbar -->
+    <script src="js/perfect-scrollbar.min.js"></script>
+    <script>
+        var ps = new PerfectScrollbar('#sidebar');
+    </script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+    <!-- <script src="js/chart_custom_style2.js"></script> -->
+</body>
+
+</html>
