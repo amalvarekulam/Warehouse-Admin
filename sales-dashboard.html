@@ -654,7 +654,17 @@
                     }
                 },
 
-            }
+            },
+            // options: {
+            //     plugins: {
+            //         legend: {
+            //             labels: {
+            //                 boxWidth: 10,
+            //                 padding: 12
+            //             }
+            //         }
+            //     }
+            // }
         });
     </script>
     <script>
@@ -663,8 +673,10 @@
         const doughnutChart = new Chart(ctx1, {
             type: 'doughnut',
             data: {
+                labels: ['Product 1', 'Product 2', 'Product 3', 'Product 4', 'Product 5', 'Product 6',
+                    'Product 7'
+                ],
                 datasets: [{
-                    label: 'My First Dataset',
                     data: [40, 50, 100, 50, 70, 90, 120],
                     backgroundColor: [
                         '#8ECAE6',
@@ -684,7 +696,12 @@
             options: {
                 plugins: {
                     legend: {
-                        display: false
+                        display: true,
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 10,
+                            padding: 12
+                        }
                     }
                 }
             }
